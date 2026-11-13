@@ -1,0 +1,8 @@
+.DS_Store
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+
+# Local working notes (not published)
+CLAUDE.md
