@@ -306,3 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 });
+
+/* ---------- Direct project links (e.g. andimeded.github.io/#stm32) ----------
+   Browsers try to jump to the linked card before the page has finished laying out,
+   which can leave the visitor at the top. Once everything has loaded, jump there again. */
+window.addEventListener("load", () => {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  const target = id && document.getElementById(id);
+  if (target) target.scrollIntoView({ behavior: "instant", block: "start" });
+});
