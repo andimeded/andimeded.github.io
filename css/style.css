@@ -86,6 +86,8 @@ code {
 
 /* Section anchors land below the sticky header */
 section[id] { scroll-margin-top: calc(var(--header-h) - 1px); }
+/* Project cards can be linked directly (e.g. #stm32) without hiding under the sticky header */
+.project-card[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 
 .skip-link {
   position: absolute;
