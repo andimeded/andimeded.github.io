@@ -182,7 +182,7 @@
 
                   <h4>DHT11 driver</h4>
                   <p>
-                    I wrote my own driver for the DHT11 instead of using a library. It drives PA4 low for 18&nbsp;ms as a start signal, releases it for 30&nbsp;µs, then reconfigures the
+                    I developed a driver for the DHT11 instead of using a library. It drives PA4 low for 18&nbsp;ms as a start signal, releases it for 30&nbsp;µs, then reconfigures the
                     pin as an input with pull-up. Using TIM1 as a microsecond timer, it samples each bit 40&nbsp;µs after
                     the rising edge, packs 40 bits into 5 bytes, validates the checksum, and returns an error on timeout.
                   </p>
